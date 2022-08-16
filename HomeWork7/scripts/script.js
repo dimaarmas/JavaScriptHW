@@ -28,13 +28,10 @@ const users = [
 
 // 1. Проверьте, что этот объект не пустой - в нем есть хотя бы один объект с ключом age.
 
-let isNotEmpty = users.map(elem => {
-    if (elem.age > 0) {
-        return true;
-    }
-    return false;
-});
+let isNotEmpty = users.map(elem => elem.age);
 console.log(isNotEmpty);
+
+users.forEach(el => console.log(el.age));
 
 //2. Пройдитесь по массиву с объектами циклом forEach и выведите каждый элемент в консоль
 
@@ -49,7 +46,7 @@ console.log(userLastName);
 
 //4. Сформируйте новый массив без объекта, где first_name == "Irina".
 
-let userFirstName = users.filter(elem => elem.first_name === 'Irina').map(elem => elem.first_name);
+let userFirstName = users.filter(elem => elem.first_name !== 'Irina');
 console.log(userFirstName);
 
 //5. Добавьте в конец нового массива объект со значениями:
@@ -67,14 +64,10 @@ userFirstName.push(newObject);
 //Создайте функцию, которая принимает в качестве аргументов объект и ключ объекта, а возвращает значение объекта, доступное по этому ключу.
 //({ 'key': 'property' }, 'key') => 'property'
 
-function makeUser(name, age) {
-    return {
-        name: name,
-        age: age
-    };
+const objectValue = (obj, key) => {
+    return obj[key];
 }
 
-let user = makeUser("John", 30);
-console.log(user.name)
- // Это пример, а не решение задачи
+console.log(objectValue({ 'firstname': 'Dima' }, 'firstname'));
+
 
