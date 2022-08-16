@@ -12,7 +12,7 @@ const users = [
         salary: 250
     },
     {
-        first_name: 'Irina',
+        first_name: 'irina',
         last_name: 'Alexandrova',
         age: 46,
         salary: 1500
@@ -26,48 +26,61 @@ const users = [
 ];
 
 
-// 1. Проверьте, что этот объект не пустой - в нем есть хотя бы один объект с ключом age.
+// // 1. Проверьте, что этот объект не пустой - в нем есть хотя бы один объект с ключом age.
 
-let isNotEmpty = users.map(elem => elem.age);
-console.log(isNotEmpty);
+// let isNotEmpty = users.map(elem => elem.age);
+// console.log(isNotEmpty);
 
-users.forEach(el => console.log(el.age));
+// users.forEach(el => console.log(el.age));
 
-//2. Пройдитесь по массиву с объектами циклом forEach и выведите каждый элемент в консоль
+// //2. Пройдитесь по массиву с объектами циклом forEach и выведите каждый элемент в консоль
 
-users.forEach(elem => {
-    console.log(elem)
-});
+// users.forEach(elem => {
+//     console.log(elem)
+// });
 
-//3. Получите из всех объектов значения last_name и сформируйте из этих имен массив
+// //3. Получите из всех объектов значения last_name и сформируйте из этих имен массив
 
-let userLastName = users.map(elem => elem.last_name);
-console.log(userLastName);
+// let userLastName = users.map(elem => elem.last_name);
+// console.log(userLastName);
 
-//4. Сформируйте новый массив без объекта, где first_name == "Irina".
+// //4. Сформируйте новый массив без объекта, где first_name == "Irina".
 
-let userFirstName = users.filter(elem => elem.first_name !== 'Irina');
-console.log(userFirstName);
+// let userFirstName = users.filter(elem => elem.first_name !== 'Irina');
+// console.log(userFirstName);
 
-//5. Добавьте в конец нового массива объект со значениями:
+// //5. Добавьте в конец нового массива объект со значениями:
 
-const newObject = {
-    first_name: 'Anton',
-    last_name: 'Gribov',
-    age: 36,
-    salary: 1760
-}
+// const newObject = {
+//     first_name: 'Anton',
+//     last_name: 'Gribov',
+//     age: 36,
+//     salary: 1760
+// }
 
-userFirstName.push(newObject);
+// userFirstName.push(newObject);
 
 
-//Создайте функцию, которая принимает в качестве аргументов объект и ключ объекта, а возвращает значение объекта, доступное по этому ключу.
-//({ 'key': 'property' }, 'key') => 'property'
+// //Создайте функцию, которая принимает в качестве аргументов объект и ключ объекта, а возвращает значение объекта, доступное по этому ключу.
+// //({ 'key': 'property' }, 'key') => 'property'
 
-const objectValue = (obj, key) => {
-    return obj[key];
-}
+// const objectValue = (obj, key) => {
+//     return obj[key];
+// }
 
-console.log(objectValue({ 'firstname': 'Dima' }, 'firstname'));
+// console.log(objectValue({ 'firstname': 'Dima' }, 'firstname'));
+
+
+let newArray = users.map(el => `${el.first_name} ${el.last_name}`)
+// console.log(newArray);
+
+// Сформируйте массив из совершеннолетних пользователей. И выведите в консоль результат в формате: <Имя> <Фамилия> (<возраст>): <зарплата>.
+
+let users_adults = users.filter(el => el.age >= 18).map(el => `${el.first_name} ${el.last_name} (${el.age}): ${el.salary}`);
+
+// console.log(users_adults);
+
+let usersNames = users.filter(elem => elem.first_name[0].toUpperCase() === 'I');
+console.log(usersNames);
 
 
