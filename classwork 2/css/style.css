@@ -1,0 +1,21 @@
+.card {
+    width: 250px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: blanchedalmond;
+    margin: 10px;
+}
+
+.cards-container {
+    display: flex;
+}
+
+.email-text-elem {
+    display: inline;
+}
+
+.avatar {
+    margin-top: 10px;
+    margin-left: 15px;
+    border-radius: 10px;
+}

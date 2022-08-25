@@ -11,7 +11,7 @@ imgElem.setAttribute('src', 'https://dyson-h.assetsadobe2.com/is/image/content/d
 imgElem.setAttribute('alt', 'dyson');
 aHrefElem.setAttribute('href', 'mailto:business@dyson.de');
 
-articleElem.innerText = 'Article: Household Appliances';
+articleElem.innerText = 'Articul: 24567A';
 nameElem.innerText = 'Name: Dyson';
 priceElem.innerText = 'Price: 200.99€';
 aHrefElem.innerText = 'business@dyson.de';

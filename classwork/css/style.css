@@ -1,0 +1,7 @@
+.card {
+    width: 250px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: blanchedalmond;
+    margin: 10px;
+}
