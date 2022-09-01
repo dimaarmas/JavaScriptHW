@@ -18,10 +18,15 @@ form.addEventListener('submit', (event) => {
 
     card.classList.add('card');
 
-    form.reset();
-
     card.append(fullNameElem, ageElem, salaryElem);
     cardsContainer.append(card);
+
+    // form.reset();
+
+    fullname.value = '';
+    age.value = '';
+    rate.value = '';
+    days.value = '';
 });
 
 //reset the form after submitting
