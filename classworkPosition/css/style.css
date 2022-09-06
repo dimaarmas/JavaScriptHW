@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.div_1 {
+    background-color: yellow;
+}
+
+.div_2 {
+    background-color: green;
+
+    position: relative;
+}
+
+.div_3 {
+    background-color: pink;
+    position: relative;
+}
+
+.div_2 div {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+}
+
+.div2_1 {
+    background-color: bisque;
+    position: absolute;
+}
+
+.div2_2 {
+    background-color: aqua;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.div3_1 {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    background-color: rgb(105, 105, 212);
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
