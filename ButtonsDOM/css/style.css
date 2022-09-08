@@ -1,4 +1,16 @@
-.changeBtnSize {
+/* .changeBtnSize {
     width: 30px;
     height: 30px;
+} */
+
+.gallery {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.newGallery {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
 }
