@@ -9,6 +9,8 @@ body {
     overflow-x: hidden;
 }
 
+/* navigation element */
+
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -73,4 +75,88 @@ a {
         padding: 20px 10px;
         border-bottom: 2px solid rgb(0, 0, 0);
     }
+}
+
+/* modal window */
+
+.popup {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.popup-body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+}
+
+/* FORM */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: 20px;
+    width: 350px;
+}
+
+.form-title {
+    margin: 15px 0;
+}
+
+.form-input {
+    border: 1px solid #CFD8DC;
+    padding: 15px 20px;
+    margin: 2px 2px 0;
+    border-radius: 12px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #FFE44D;
+}
+
+.reset-text {
+    font-size: 13px;
+    color: gray;
+    text-align: end;
+    margin: 15px 0;
+}
+
+.form-btn {
+    margin: 2px 0;
+    border-radius: 55px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #FFE44D;
+    border: 1px solid transparent;
+}
+
+.redirect-btn {
+    background-color: #ffffff;
+    border: 1px solid #CFD8DC;
+}
+
+.cross-icon {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    top: 30px;
 }
