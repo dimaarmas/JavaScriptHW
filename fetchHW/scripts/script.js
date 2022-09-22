@@ -1,21 +1,22 @@
 const rootElem = document.querySelector('#root');
 
 const render = (json) => {
-    json.forEach((todos) => {
+    json.forEach(({ title, completed }) => {
         const card = document.createElement('div');
         const titleElem = document.createElement('p');
         const statusElem = document.createElement('p');
 
-        titleElem.innerText = `Title: ${todos.title}`;
+        titleElem.innerText = `Title: ${title}`;
 
         card.classList.add('card')
 
-        if (todos.completed === true) {
+
+        if (completed === true) {
             statusElem.innerText = 'Status: done';
-            card.style.backgroundColor = 'green';
+            card.style.backgroundColor = 'lightgreen';
         } else {
             statusElem.innerText = 'Status: not done';
-            card.style.backgroundColor = 'gray';
+            card.style.backgroundColor = 'lightgray';
         }
 
 

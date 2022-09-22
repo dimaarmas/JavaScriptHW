@@ -8,6 +8,6 @@
 
 #root {
     display: grid;
-    grid-template: repeat(2, 200px) / repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
