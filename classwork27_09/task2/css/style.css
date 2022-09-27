@@ -1,0 +1,18 @@
+.card {
+    border: 2px solid rgb(116, 42, 236);
+    background-color: rgb(192, 189, 243);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+.triggers button {
+    border: 1px solid transparent;
+    background-color: rgb(123, 172, 228);
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    width: 60px;
+}
