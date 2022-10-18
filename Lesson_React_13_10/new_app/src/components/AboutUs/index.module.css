@@ -1,0 +1,23 @@
+.aboutUs_block {
+    display: flex;
+    justify-content: space-between;
+    padding: 140px 0;
+}
+
+.achivements_cards {
+    display: grid;
+    grid-template: repeat(2, 255px) / repeat(2, 255px);
+    gap: 30px;
+}
+
+.info_text {
+    width: 445px;
+    font-size: 18px;
+    font-weight: 300px;
+    line-height: 25px;
+}
+
+.accent {
+    color: #005FA3;
+    display: block;
+}

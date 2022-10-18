@@ -1,0 +1,32 @@
+.aboutUs_item {
+    border: 2px solid transparent;
+    background-color: #EBEBEB;
+    padding: 30px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aboutUs_item:hover {
+    background-color: #005FA3;
+    color: #FFFF;
+}
+
+.aboutUs_item:hover a {
+    color: #FFFF;
+}
+
+.progress {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 55px;
+}
+
+.title {
+    margin: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    width: 107px;
+}
