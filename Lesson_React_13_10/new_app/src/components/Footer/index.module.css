@@ -1,0 +1,14 @@
+.footer_section {
+    padding: 100px 0;
+}
+
+.footer_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_block p {
+    font-weight: 300;
+    font-size: 14px;
+    color: #000000;
+}
