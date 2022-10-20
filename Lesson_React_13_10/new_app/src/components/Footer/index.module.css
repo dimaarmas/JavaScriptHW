@@ -1,14 +1,14 @@
-.footer_section {
-    padding: 100px 0;
-}
-
 .footer_block {
     display: flex;
     justify-content: space-between;
+    font-size: 14px;
+    font-weight: 300px;
+    padding: 70px 0;
 }
 
-.footer_block p {
-    font-weight: 300;
-    font-size: 14px;
-    color: #000000;
+
+@media (max-width: 940) {
+    .footer_block {
+        margin: 0 90px;
+    }
 }

@@ -12,3 +12,13 @@
     grid-auto-rows: 360px;
     gap: 30px;
 }
+
+@media (max-width: 940px) {
+    .cards_container {
+        grid-template-columns: 1fr;
+    }
+
+    .services_block {
+        margin: 49px 90px 81px 90px;
+    }
+}

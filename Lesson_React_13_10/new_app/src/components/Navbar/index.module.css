@@ -13,3 +13,18 @@
     grid-template-columns: repeat(5, max-content);
     gap: 68px;
 }
+
+.nav_burger {
+    display: none;
+    font-size: 40px;
+}
+
+@media (max-width: 940px) {
+    .nav_menu {
+        display: none;
+    }
+
+    .nav_burger {
+        display: flex;
+    }
+}
