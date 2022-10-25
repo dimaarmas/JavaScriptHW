@@ -1,0 +1,6 @@
+.comment_item {
+    color: gray;
+    border-bottom: 2px dashed lightblue;
+    padding-bottom: 5px;
+    margin: 10px 0;
+}
