@@ -1,4 +1,4 @@
-.tem_form_container {
+.user_form_container {
     width: 80%;
     padding: 30px;
     margin: 20px auto;
@@ -9,13 +9,13 @@
     gap: 20px;
 }
 
-.team_form {
+.user_form {
     display: grid;
     grid-auto-rows: 30px;
     gap: 20px;
 }
 
-.team_form button {
+.user_form button {
     background-color: #27ae60;
     border: 1px solid transparent;
     color: #FFFF;
