@@ -1,0 +1,10 @@
+.triggers_container button {
+    background-color: green;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    width: 70px;
+}
