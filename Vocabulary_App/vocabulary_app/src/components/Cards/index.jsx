@@ -2,7 +2,7 @@ import React from 'react'
 import s from './index.module.css'
 
 
-export default function Card({ id, de, rus, lang, change_lang }) {
+export default function Card({ id, de, rus, lang, change_lang, removeElement }) {
     const text = lang === 'rus' ? rus : de;
 
     const card_style = {

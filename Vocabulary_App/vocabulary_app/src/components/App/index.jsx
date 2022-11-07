@@ -41,12 +41,21 @@ function App() {
     }
   ])
 
+  const removeElement = (id) => {
+    setCards(cards.filter(el => {
+      if (el.id !== id) {
+        el.lang = el.lang === 'rus' ? 'de' : 'rus'
+      }
+      return el
+    }))
+  };
+
 
 
   return (
     <div>
       <AddForm add_card={add_card} />
-      <CardsContainer card_words={cards} change_lang={change_lang} />
+      <CardsContainer card_words={cards} change_lang={change_lang} removeElement={removeElement} />
       <Triggers change_de={change_to_de} change_rus={change_to_rus} />
     </div>
   );
