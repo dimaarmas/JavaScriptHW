@@ -1,6 +1,7 @@
 import CardsContainer from "../CardsContainer";
 import { words } from '../../data/words'
 import { useState } from 'react'
+import { Context } from "../../context";
 import AddForm from "../AddForm";
 import Triggers from "../Triggers";
 
@@ -41,22 +42,18 @@ function App() {
     }
   ])
 
-  const removeElement = (id) => {
-    setCards(cards.filter(el => {
-      if (el.id !== id) {
-        el.lang = el.lang === 'rus' ? 'de' : 'rus'
-      }
-      return el
-    }))
-  };
+  const removeElement = (id) => setCards(cards.filter(el => el.id !== id));
 
 
 
   return (
     <div>
-      <AddForm add_card={add_card} />
-      <CardsContainer card_words={cards} change_lang={change_lang} removeElement={removeElement} />
-      <Triggers change_de={change_to_de} change_rus={change_to_rus} />
+      <Context.Provider value={{ cards, add_card, change_lang, removeElement, change_to_de, change_to_rus }}>
+        <AddForm />
+        <CardsContainer />
+        <Triggers />
+      </Context.Provider>
+
     </div>
   );
 }
