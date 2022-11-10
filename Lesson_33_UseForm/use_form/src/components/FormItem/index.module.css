@@ -1,0 +1,13 @@
+.form_title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.form_info {
+    color: #7B8E98;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 24px 0;
+    width: 356px;
+}
