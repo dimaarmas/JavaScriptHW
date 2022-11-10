@@ -11,3 +11,13 @@
     margin: 24px 0;
     width: 356px;
 }
+
+.error_message {
+    color: red;
+    font-size: 12px;
+    text-align: end;
+}
+
+.form_item {
+    width: 356px;
+}
