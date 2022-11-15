@@ -3,8 +3,9 @@ import FormButton from '../FormButton'
 import FormInput from '../FormInput'
 import s from './index.module.css'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 
-export default function FormItem({ title, button, infoText, infoText_2, formType }) {
+export default function FormItem({ title, button, infoText, infoText_2, formType, btn_link, link_text }) {
 
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onBlur' });
 
@@ -63,13 +64,21 @@ export default function FormItem({ title, button, infoText, infoText_2, formType
 
 
 
-
-            <p className={s.form_info}>{infoText}</p>
+            {
+                ['registration', 'reset_password'].includes(formType)
+                    ? <p className={s.form_info}>{infoText}</p>
+                    : <Link to='/reset_password'>
+                        <p className={s.form_info}>{infoText}</p>
+                    </Link>
+            }
+            {/* <p className={s.form_info}>{infoText}</p> */}
             <FormButton color='yellow'>{button.submit}</FormButton>
 
             {
                 ['registration', 'login'].includes(formType)
-                    ? <FormButton color='white'>{button.redirect}</FormButton>
+                    ? <Link to={btn_link} style={{ textDecoration: 'none' }}>
+                        <FormButton color='white'>{button.redirect}</FormButton>
+                    </Link>
                     : ''
             }
         </form>
