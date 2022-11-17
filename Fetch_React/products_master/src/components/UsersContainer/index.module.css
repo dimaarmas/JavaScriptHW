@@ -1,0 +1,6 @@
+.users_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px;
+    gap: 30px;
+}
