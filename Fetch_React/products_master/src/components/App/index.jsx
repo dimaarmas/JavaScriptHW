@@ -2,10 +2,10 @@ import { getProducts } from '../../requests/products'
 import { getUsers } from '../../requests/users';
 import { useState, useEffect } from 'react'
 import { Context } from '../../context'
-import ProductsContainer from '../ProductsContainer';
-import UsersContainer from '../UsersContainer';
 import Productspage from '../../pages/Productspage'
 import UsersPage from '../../pages/UsersPage';
+import Nav from '../Nav';
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
@@ -27,8 +27,13 @@ function App() {
   return (
     <div>
       <Context.Provider value={{ products, users }}>
-        <Productspage />
-        <UsersPage />
+        <Nav />
+        <Routes>
+          <Route path='/products_page' element={<Productspage />} />
+          <Route path='/users_page' element={<UsersPage />} />
+
+        </Routes>
+
       </Context.Provider>
     </div>
   );
