@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { Context } from '../../context'
 import ProductsContainer from '../ProductsContainer';
 import UsersContainer from '../UsersContainer';
+import Productspage from '../../pages/Productspage'
+import UsersPage from '../../pages/UsersPage';
 
 function App() {
 
@@ -25,8 +27,8 @@ function App() {
   return (
     <div>
       <Context.Provider value={{ products, users }}>
-        <ProductsContainer />
-        <UsersContainer />
+        <Productspage />
+        <UsersPage />
       </Context.Provider>
     </div>
   );
