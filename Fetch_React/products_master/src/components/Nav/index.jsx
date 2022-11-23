@@ -7,6 +7,7 @@ export default function Nav() {
         <div className={s.nav_menu}>
             <Link to='/products_page'>Products</Link>
             <Link to='/users_page'>Users</Link>
+            <Link to='/posts_page'>Posts</Link>
         </div>
     )
 }
