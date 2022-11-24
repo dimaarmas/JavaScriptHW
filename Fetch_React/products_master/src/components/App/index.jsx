@@ -31,6 +31,15 @@ function App() {
   const createNewUser = user => setUsers(prev => [...prev, user]);
   const createNewProduct = user => setProducts(prev => [...prev, user]);
 
+  useEffect(() => {
+    const res = JSON.parse(localStorage.getItem('uses_data'));
+    setUsers(res);
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('users_data', JSON.stringify(users))
+  }, [users]);
+
 
   return (
     <div>
