@@ -1,13 +1,23 @@
 import CardsContainer from "../CardsContainer";
 import { words } from '../../data/words'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Context } from "../../context";
 import AddForm from "../AddForm";
 import Triggers from "../Triggers";
 
 function App() {
 
-  const [cards, setCards] = useState(words)
+  const [cards, setCards] = useState(words);
+
+  useEffect(() => {
+    const res = JSON.parse(localStorage.getItem('cards'));
+    setCards(res);
+  }, []); // функция выполняется один раз при перезагрузке страницы, за стейстом следить не нужно
+
+  useEffect(() => {
+    localStorage.setItem('cards', JSON.stringify(cards))
+  }, [cards]); // второй аргумент - это указание за каким состоянием следить
+
 
   const change_to_de = () => {
     setCards(cards.map(el => {
@@ -53,7 +63,6 @@ function App() {
         <CardsContainer />
         <Triggers />
       </Context.Provider>
-
     </div>
   );
 }
