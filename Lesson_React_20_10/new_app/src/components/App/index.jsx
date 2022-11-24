@@ -1,6 +1,6 @@
 import PostContainer from "../PostContainer";
 import { posts_data } from '../../data/posts'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import AddPostForm from "../AddPostForm";
 
 function App() {
@@ -12,6 +12,17 @@ function App() {
     target.like = !target.like;
     setPosts([...posts]);
   }
+
+  useEffect(() => {
+    const res = JSON.parse(localStorage.getItem('posts_data'));
+    setPosts(res);
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('posts_data', JSON.stringify(posts))
+  }, [posts])
+
+
 
   const add_comment = (id, value) => {
     const comment = {
