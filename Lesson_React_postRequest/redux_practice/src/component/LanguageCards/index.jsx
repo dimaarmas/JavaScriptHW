@@ -1,10 +1,12 @@
 import React from 'react'
-import { addCard } from '../../store/reducer/languageReducer';
-import { useDispatch } from 'react-redux';
+import { addCard, changeCard, deleteCard } from '../../store/reducer/languageReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import LanguageItem from '../LanguageItem';
 
 export default function LanguageCards() {
 
     const dispatch = useDispatch();
+    const state = useSelector(state => state.languages);
 
     const submit = (event) => {
         event.preventDefault();
@@ -19,6 +21,10 @@ export default function LanguageCards() {
         rus.value = '';
     }
 
+    const change = (id) => dispatch(changeCard(id));
+    const removeCard = (id) => dispatch(deleteCard(id));
+
+
     return (
         <div>
             <form onSubmit={submit}>
@@ -27,7 +33,11 @@ export default function LanguageCards() {
                 <button>Add</button>
             </form>
 
-            <div></div>
+            <div>
+                {
+                    state.map(el => <LanguageItem key={el.id} {...el} change={change} removeCard={removeCard} />)
+                }
+            </div>
         </div>
     )
 }
