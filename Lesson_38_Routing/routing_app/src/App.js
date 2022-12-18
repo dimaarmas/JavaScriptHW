@@ -15,7 +15,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="about_page" element={<AboutPage />} />
           <Route path="categories_page" element={<CategoriesPage />} />
-          <Route path="categories/:category" element={<ProductsPage />} />
+          <Route path="categories_page/:category" element={<ProductsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
