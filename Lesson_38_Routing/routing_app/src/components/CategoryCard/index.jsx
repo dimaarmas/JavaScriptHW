@@ -6,7 +6,7 @@ export default function CategoryCard({ category, prodcuts }) {
     return (
 
         <div className={s.category_card}>
-            <Link>
+            <Link to={category}>
                 {category}
             </Link>
         </div>
