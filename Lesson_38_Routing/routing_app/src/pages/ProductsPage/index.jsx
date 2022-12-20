@@ -16,11 +16,12 @@ export default function ProductsPage() {
     console.log(products)
 
     return (
-        <div>
-            {category}
-            {
-                products.map(el => <ProductCard key={el.id} {...el} />)
-            }
-        </div>
+        products.length === 0
+            ? <p>Loading....</p>
+            : <div>
+                {
+                    products.map(el => <ProductCard key={el.id} {...el} />)
+                }
+            </div>
     )
 }
