@@ -1,0 +1,12 @@
+.productCard {
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.productCard img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}

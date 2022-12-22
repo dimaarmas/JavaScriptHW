@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<MainPage />} />
-          <Route path='cart' element={<CartPage />} />
+          {/* <Route path='cart' element={<CartPage />} /> */}
         </Route>
       </Routes>
     </div >

@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { load_products } from '../../store/requests/products';
 import { useDispatch } from 'react-redux';
+import ProductCard from '../ProductCard';
+
+
 
 export default function ProductsContainer() {
 
@@ -16,6 +19,14 @@ export default function ProductsContainer() {
     console.log(products);
 
     return (
-        <div>ProductsContainer</div>
+        products.length === 0
+            ? <p>Loading....</p>
+            : <div>
+                {
+                    products.map(el => <ProductCard key={el.id} {...el} />)
+                }
+            </div>
+
+
     )
 }
