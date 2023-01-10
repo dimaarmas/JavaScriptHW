@@ -1,3 +1,9 @@
 .category_card {
-    border: 2px solid blue;
+    border: 2px solid rgb(8, 8, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
 }
