@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './index.module.css'
 
-export default function ProductCard({ id, title, image }) {
+export default function ProductCard({ id, title, image, price }) {
 
     const product_url = `/product/${id}`
 
@@ -12,6 +12,7 @@ export default function ProductCard({ id, title, image }) {
                 <img src={image} alt={title} />
             </Link>
             <p>Title: {title} </p>
+            <p>Price: {price} $</p>
             <Link to={product_url}>
                 <button>Add to cart</button>
             </Link>

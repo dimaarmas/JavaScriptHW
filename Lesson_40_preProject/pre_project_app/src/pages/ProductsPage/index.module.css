@@ -14,3 +14,15 @@
 .products_page {
     padding: 50px 0 84px 0;
 }
+
+.search_form {
+    display: inline;
+}
+
+.search_form input {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    width: 100px;
+    margin-left: 15px;
+}
