@@ -1,0 +1,18 @@
+.img_block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title {
+    position: relative;
+    top: 15px;
+    left: 16px;
+    font-size: 22px;
+}
+
+.img_block button {
+    position: absolute;
+    bottom: 15px;
+}
